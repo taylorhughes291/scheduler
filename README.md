@@ -19,6 +19,8 @@ application up and running.
 * Modify seed script to break up current seed data and create new data table that will house all time slots in 30 minute increments
 * Modify GET request or create new one that will get all available time slots
 
+## User Story # 3 - As a User, I want to book an appointment with a coach at one of their available times.
+* Test out PUT requests on timeslots to change "available" field to false
 
 ## System Requirements - what platform/service am I deployed to
 

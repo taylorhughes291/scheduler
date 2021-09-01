@@ -48,6 +48,6 @@ class TimeslotsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def timeslot_params
-      params.fetch(:timeslot, {})
+      params.fetch(:timeslot, {}).permit(:available)
     end
 end
