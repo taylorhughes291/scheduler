@@ -29,7 +29,7 @@ Things you may want to cover:
 * Initialize Rails project
 * Create Database model and migrate
 * Import coach seed data into database
-* Initialize GET route that can access all coaches
+* Initialize GET route that can access all db entries
 
 * Initialize React App
 * Write function to retrieve data from GET route
