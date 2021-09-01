@@ -23,9 +23,11 @@ application up and running.
 * Test out PUT requests on timeslots to change "available" field to false
 
 ## System Requirements - what platform/service am I deployed to
+I have decided to deploy to Heroku. I suggest Heroku for this deployment.
 
 ### Build/Run Instructions
-* Ensure that you have deployed an API Key on your google account so that you are able to access the Google Sheet. Once you have that API Key, make sure that it is set as an environmental variable in Heroku (more on that down the page).
+* Ensure that you have deployed an API Key on your google account so that you are able to access the Google Sheet. Once you have that API Key, make sure that it is set as an environmental variable in Heroku (more on that down the page). You can find a good set of instructions on how to leverage the newest version of google sheets API at this link: https://support.google.com/docs/thread/121088347/retrieving-data-from-sheets-results-in-404-error-50-of-the-time?hl=en
+
 
 #### LOCAL DEV ENVIRONMENT
 
