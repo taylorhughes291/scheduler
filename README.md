@@ -40,10 +40,19 @@ Things you may want to cover:
 ### System Requirements - what platform/service am I deployed to
 
 ### Build/Run Instructions
-* Make sure that you have yarn installed on your computer (found at https://yarnpkg.com/en/docs/install) and subsequently webpacker by running the command 
+* Make sure that you have yarn installed on your computer (found at https://yarnpkg.com/en/docs/install) and subsequently webpacker by running the command below in the scheduler folder. This is required in order to run a development server to test your changes.
 ```
 rails webpacker:install
 ```
-in the scheduler folder. This is required in order to run a development server to test your changes.
+
+* Make sure you run the command below in order to install all the dependencies for your development server.
+```
+bundle
+```
+
+* If you plan on running the application on your development server with the original seed data, be sure to run the command below to get the data reset and seeded. Note that this will delete everything in there to be replaced twith the original source data.
+```
+rails db:seed
+```
 
 ### Challenges/Issues encountered
