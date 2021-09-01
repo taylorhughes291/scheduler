@@ -50,7 +50,7 @@ rails webpacker:install
 bundle
 ```
 
-* If you plan on running the application on your development server with the original seed data, be sure to run the command below to get the data reset and seeded. Note that this will delete everything in there to be replaced twith the original source data.
+* If you plan on running the application on your development server, test server, or production server with the original seed data, be sure to run the command below to get the data reset and seeded. Note that this will delete everything in there to be replaced with the original source data.
 ```
 rails db:seed
 ```
