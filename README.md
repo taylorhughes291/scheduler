@@ -3,25 +3,8 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
-
 * Ruby version - 3.0.1
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 ## User Story #1 - As a User, I want to see which coaches I can schedule with.
 
@@ -31,15 +14,19 @@ Things you may want to cover:
 * Import coach seed data into database
 * Initialize GET route that can access all db entries
 
-* Initialize React App
-* Write function to retrieve data from GET route
-* Initialize a useEffect to retrieve coach data once
-* Display all data
-* Configure layout and design
+## User Story #2 - As a User, I want to see what 30 minute timeslots are available to schedule with a particular coach.
+* Create new timeslots database model and migration
+* Modify seed script to break up current seed data and create new data table that will house all time slots in 30 minute increments
+* Modify GET request or create new one that will get all available time slots
 
-### System Requirements - what platform/service am I deployed to
+
+## System Requirements - what platform/service am I deployed to
 
 ### Build/Run Instructions
+* Ensure that you have deployed an API Key on your google account so that you are able to access the Google Sheet. Once you have that API Key, make sure that it is set as an environmental variable in Heroku (more on that down the page).
+
+#### LOCAL DEV ENVIRONMENT
+
 * Make sure that you have yarn installed on your computer (found at https://yarnpkg.com/en/docs/install) and subsequently webpacker by running the command below in the scheduler folder. This is required in order to run a development server to test your changes.
 ```
 rails webpacker:install
@@ -55,4 +42,15 @@ bundle
 rails db:seed
 ```
 
+#### DEPLOYED DEV/TEST ENVIRONMENT
+* I chose to deploy to Heroku
+* Ensure to save your Google API Key for your Google Sheet to your Environmental Variable.
+* After build has completed, make sure to click on the "More" button in Heroku, and "Run Console". You will type in the following commands in order to ready the database:
+```
+rake db:schema:load
+rake db:seed
+```
+
 ### Challenges/Issues encountered
+* I encountered some problems with database migrations and schema, but ultimately ended up deleteing all my migrations and starting from scratch which worked great.
+* Upon deployment, I found out that Heroku doesn't accept sqlite3 as a database, so I had to pivot to postgreSQL, which was a little tricky but ultimately I made the correct configurations in the config/database.yml file.
