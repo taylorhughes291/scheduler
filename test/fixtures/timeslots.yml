@@ -2,12 +2,12 @@
 
 one:
   coach: MyString
-  day_of_week: MyString
   time: MyString
   available: false
+  day_of_week: MyString
 
 two:
   coach: MyString
-  day_of_week: MyString
   time: MyString
   available: false
+  day_of_week: MyString
