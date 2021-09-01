@@ -14,8 +14,13 @@ application up and running.
 * Import coach seed data into database
 * Initialize GET route that can access all db entries
 
+## User Story #2 - As a User, I want to see what 30 minute timeslots are available to schedule with a particular coach.
+* Create new timeslots database model and migration
+* Modify seed script to break up current seed data and create new data table that will house all time slots in 30 minute increments
+* Modify GET request or create new one that will get all available time slots
 
-### System Requirements - what platform/service am I deployed to
+
+## System Requirements - what platform/service am I deployed to
 
 ### Build/Run Instructions
 * Ensure that you have deployed an API Key on your google account so that you are able to access the Google Sheet. Once you have that API Key, make sure that it is set as an environmental variable in Heroku (more on that down the page).

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coach: MyString
+  day_of_week: MyString
+  time: MyString
+  available: false
+
+two:
+  coach: MyString
+  day_of_week: MyString
+  time: MyString
+  available: false
