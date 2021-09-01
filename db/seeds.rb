@@ -7,9 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'rest-client'
+require 'time'
 
 def delete_data
     Availability.delete_all
+    Timeslot.delete_all
 end
 
 def coach_data_seed
@@ -19,6 +21,13 @@ def coach_data_seed
     coach_availability = data_array["values"]
     coach_availability.each do |s|
         Availability.create(name: s[0], timezone: s[1], day_of_week: s[2], available_at: s[3], available_until: s[4])
+
+        time_counter = Time.strptime(s[3], '%I:%M %p')
+        time_stopper = Time.strptime(s[4], '%I:%M %p')
+        while time_counter < time_stopper do
+            Timeslot.create(coach: s[0], day_of_week: s[2], time: time_counter.strftime("%I:%M %p"), available: true)
+            time_counter = time_counter + (60 * 30)
+        end
     end
 end
 
